@@ -8,40 +8,24 @@ Suite Teardown   Close Browser
 *** Keywords ***
 Expand AAA Group And Locate Test Group
     # wait for the AAA row to show up
-    Wait Until Element Is Visible    xpath=//span[normalize-space(.)="AAA"]    10s
+    Wait Until Element Is Visible    xpath=//span[normalize-space(.)="${PNF_Management_Node}"]    10s
     # click the toggle-icon immediately before the AAA button
-    Click Element    xpath=//span[normalize-space(.)="AAA"]/parent::button/preceding-sibling::md-icon
+    Click Element    xpath=//span[normalize-space(.)="${PNF_Management_Node}"]/parent::button/preceding-sibling::md-icon
     # wait for one of the child entries (e.g. AMF) to appear
-    Click Element    xpath=//p[normalize-space(.)="${Cluster_name}"]/following-sibling::md-icon[contains(@class,"editClass")]
+    Click Element    xpath=//p[normalize-space(.)="${Create_cluster_name}"]/following-sibling::md-icon[contains(@class,"editClass")]
     Sleep    5s
 
 Update Field In Section
     [Arguments]    ${section_header}    ${label_text}    ${value}
-    # 1) Find the legend
     ${loc1}=    Set Variable    //legend[normalize-space(.)="${section_header}"]
     Run Keyword And Continue On Failure    Page Should Contain Element    xpath=${loc1}
-    Log To Console    Legend locator: ${loc1}
-
-    # 2) Move into the section container
     ${loc2}=    Set Variable    ${loc1}/following-sibling::div[1]
     Run Keyword And Continue On Failure    Page Should Contain Element    xpath=${loc2}
-    Log To Console    Container locator: ${loc2}
-
-    # 3) Find the label within that container
     ${loc3}=    Set Variable    ${loc2}//label[normalize-space(.)="${label_text}"]
     Run Keyword And Continue On Failure    Page Should Contain Element    xpath=${loc3}
-    Log To Console    Label locator: ${loc3}
-
-    # 4) Grab the generated input ID
-    ${field_id}=    Get Element Attribute    xpath=${loc3}    for
-    Log To Console    Resolved field id: ${field_id}
-
-    # 5) Verify and type
-    Log To Console               Checking input with id: ${field_id}
-    Page Should Contain Element  id=${field_id}
-    Input Text                   id=${field_id}    ${value}
-
-    Sleep    3s
+    Log To Console    ${loc3}
+    Input Text                  ${loc3}/following-sibling::input    ${value}
+    Sleep    1s
 
 Update Dropdown Field
     [Arguments]    ${section_header}    ${dropdown_label}    ${option_value}
@@ -116,7 +100,7 @@ Check Dropdown After Update    [Arguments]    ${section_header}    ${label_text}
 *** Test Cases ***
 Test1 Update Group
     Open Network Inventory
-    Expand PNF/VNF Management
+    Expand Network Function
     Expand AAA Group And Locate Test Group
     FOR    ${section}    ${label}     ${value}    IN    @{Update_FIELDS}
         Update Field In Section    ${section}    ${label}    ${value}
