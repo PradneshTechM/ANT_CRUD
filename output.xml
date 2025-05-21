@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.11.4 on win32)" generated="2025-05-20T15:30:01.965447" rpa="false" schemaversion="5">
+<suite id="s1" name="DeleteGroup test" source="C:\Users\pk0952\PycharmProjects\ANT_CRUD\tests\PNF\DeleteGroup_test.robot">
+<kw name="Login Once" owner="common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-20T15:30:02.557795" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
+<msg time="2025-05-20T15:30:02.558796" level="INFO">Opening browser 'Chrome' to base url 'https://ant228.dev.att.com:8443'.</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<arg>executable_path=${DRIVER_PATH}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-20T15:30:02.557795" elapsed="2.711879"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-20T15:30:05.269674" elapsed="0.108001"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=desktop_dropdown_button</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-20T15:30:05.377675" elapsed="0.036998"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-20T15:30:05.415673" level="INFO">Clicking element 'id=desktop_dropdown_button'.</msg>
+<arg>id=desktop_dropdown_button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-20T15:30:05.414673" elapsed="0.122004"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=WindowsAccountSelectId</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-20T15:30:05.536677" elapsed="0.032001"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-20T15:30:05.569651" level="INFO">Clicking element 'id=WindowsAccountSelectId'.</msg>
+<arg>id=WindowsAccountSelectId</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-20T15:30:05.568678" elapsed="0.119636"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=windowsSubmit</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-20T15:30:05.688314" elapsed="0.038027"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-20T15:30:05.726341" level="INFO">Clicking element 'id=windowsSubmit'.</msg>
+<arg>id=windowsSubmit</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-20T15:30:05.726341" elapsed="0.594966"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${PRIORITY_TEXT}</arg>
+<arg>60s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-05-20T15:30:06.322304" elapsed="11.024629"/>
+</kw>
+<status status="PASS" start="2025-05-20T15:30:02.555794" elapsed="14.791139"/>
+</kw>
+<test id="s1-t1" name="Test1 Update Group" line="34">
+<kw name="Open Network Inventory" owner="common">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-20T15:30:17.349934" level="INFO">Clicking element 'xpath=//figure[.//div[normalize-space(.)="Network Inventory"]]'.</msg>
+<arg>xpath=//figure[.//div[normalize-space(.)="Network Inventory"]]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-20T15:30:17.349934" elapsed="1.635964"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Network Inventory</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-05-20T15:30:18.985898" elapsed="0.107996"/>
+</kw>
+<status status="PASS" start="2025-05-20T15:30:17.348933" elapsed="1.744961"/>
+</kw>
+<kw name="Expand PNF/VNF Management" owner="common">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-20T15:30:19.094898" level="INFO">Clicking element 'xpath=//md-list-item[.//p[normalize-space(.)="PNF/VNF Management"]]//button[contains(@class,"md-secondary")]'.</msg>
+<arg>xpath=//md-list-item[.//p[normalize-space(.)="PNF/VNF Management"]]//button[contains(@class,"md-secondary")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-20T15:30:19.094898" elapsed="0.213733"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//span[normalize-space(.)="AAA"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-20T15:30:19.308631" elapsed="2.890132"/>
+</kw>
+<status status="PASS" start="2025-05-20T15:30:19.094898" elapsed="3.103865"/>
+</kw>
+<kw name="Expand AAA Group And Delete Test Group">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//span[normalize-space(.)="AAA"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-20T15:30:22.200733" elapsed="0.062029"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-20T15:30:22.263762" level="INFO">Clicking element 'xpath=//span[normalize-space(.)="AAA"]/parent::button/preceding-sibling::md-icon'.</msg>
+<arg>xpath=//span[normalize-space(.)="AAA"]/parent::button/preceding-sibling::md-icon</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-20T15:30:22.263762" elapsed="0.311980"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-20T15:30:22.575742" level="INFO">Clicking element 'xpath=//p[normalize-space(.)="test33"]/following-sibling::md-icon[@aria-label="Delete"]'.</msg>
+<arg>xpath=//p[normalize-space(.)="${Cluster_name}"]/following-sibling::md-icon[@aria-label="Delete"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-20T15:30:22.575742" elapsed="0.263150"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-20T15:30:27.840828" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-20T15:30:22.839919" elapsed="5.000909"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//md-dialog-actions//button[.//span[normalize-space(.)="YES"]]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-20T15:30:27.841832" elapsed="0.048205"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-20T15:30:27.891063" level="INFO">Clicking element 'xpath=//md-dialog-actions//button[.//span[normalize-space(.)="YES"]]'.</msg>
+<arg>xpath=//md-dialog-actions//button[.//span[normalize-space(.)="YES"]]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-20T15:30:27.891063" elapsed="0.205969"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain Element" owner="SeleniumLibrary">
+<arg>xpath=//p[normalize-space(.)="${Cluster_name}"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` disappears from the current page.</doc>
+<status status="PASS" start="2025-05-20T15:30:28.097032" elapsed="1.951754"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-20T15:30:30.101782" level="INFO">Current page does not contain element 'xpath=//p[normalize-space(.)="test33"]'.</msg>
+<arg>xpath=//p[normalize-space(.)="${Cluster_name}"]</arg>
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<status status="PASS" start="2025-05-20T15:30:30.049786" elapsed="0.051996"/>
+</kw>
+<status status="PASS" start="2025-05-20T15:30:22.199744" elapsed="7.902038"/>
+</kw>
+<status status="PASS" start="2025-05-20T15:30:17.346933" elapsed="12.755849"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-20T15:30:30.104782" elapsed="2.359603"/>
+</kw>
+<status status="PASS" start="2025-05-20T15:30:01.969416" elapsed="30.494969"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="DeleteGroup test" id="s1" pass="1" fail="0" skip="0">DeleteGroup test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-20T15:30:02.557795" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
+</errors>
+</robot>

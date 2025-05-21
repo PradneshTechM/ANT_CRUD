@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.11.4 on win32)" generated="2025-05-09T12:25:30.335577" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Test" source="C:\Users\pk0952\PycharmProjects\ANT_CRUD\login_test.robot">
+<kw name="Setup Chrome With WebDriverManager" type="SETUP">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-05-09T12:25:31.145327" level="FAIL">Evaluating expression "__import__('webdriver_manager.chrome').chrome_driver.ChromeDriverManager().install()" failed: ModuleNotFoundError: No module named 'webdriver_manager.chrome.chrome_driver'; 'webdriver_manager.chrome' is not a package</msg>
+<var>${driver_path}</var>
+<arg>__import__('webdriver_manager.chrome').chrome_driver.ChromeDriverManager().install()</arg>
+<arg>modules=webdriver_manager.chrome.chrome_driver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="FAIL" start="2025-05-09T12:25:30.925562" elapsed="0.225765">Evaluating expression "__import__('webdriver_manager.chrome').chrome_driver.ChromeDriverManager().install()" failed: ModuleNotFoundError: No module named 'webdriver_manager.chrome.chrome_driver'; 'webdriver_manager.chrome' is not a package</status>
+</kw>
+<kw name="Set Environment Variable" owner="OperatingSystem">
+<arg>PATH</arg>
+<arg>${driver_path}${/}..${:}${ENV:PATH}</arg>
+<doc>Sets an environment variable to a specified value.</doc>
+<status status="NOT RUN" start="2025-05-09T12:25:31.152325" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-05-09T12:25:30.923566" elapsed="0.228759">Evaluating expression "__import__('webdriver_manager.chrome').chrome_driver.ChromeDriverManager().install()" failed: ModuleNotFoundError: No module named 'webdriver_manager.chrome.chrome_driver'; 'webdriver_manager.chrome' is not a package</status>
+</kw>
+<test id="s1-t1" name="Verify That Example Site Opens" line="9">
+<status status="FAIL" start="2025-05-09T12:25:31.153324" elapsed="0.001000">Parent suite setup failed:
+Evaluating expression "__import__('webdriver_manager.chrome').chrome_driver.ChromeDriverManager().install()" failed: ModuleNotFoundError: No module named 'webdriver_manager.chrome.chrome_driver'; 'webdriver_manager.chrome' is not a package</status>
+</test>
+<status status="FAIL" start="2025-05-09T12:25:30.339579" elapsed="0.815752">Suite setup failed:
+Evaluating expression "__import__('webdriver_manager.chrome').chrome_driver.ChromeDriverManager().install()" failed: ModuleNotFoundError: No module named 'webdriver_manager.chrome.chrome_driver'; 'webdriver_manager.chrome' is not a package</status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login Test" id="s1" pass="0" fail="1" skip="0">Login Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
