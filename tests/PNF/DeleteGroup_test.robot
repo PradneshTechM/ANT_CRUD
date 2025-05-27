@@ -2,11 +2,11 @@
 Library           SeleniumLibrary
 Suite Setup       Login Once
 Suite Teardown    Close Browser
-Resource    ../../Resources/common.robot
+Resource    ../../Resources/PNF/common.robot
 Resource    ../../Resources/PNF/Variables.robot
 
 *** Keywords ***
-Expand AAA Group And Delete Test Group
+Expand Node Group And Delete Test Group
     # wait for the AAA row to show up
     Wait Until Element Is Visible    xpath=//span[normalize-space(.)="${PNF_Management_Node}"]    10s
     # click the toggle-icon immediately before the AAA button
@@ -31,7 +31,7 @@ Expand AAA Group And Delete Test Group
 
 
 *** Test Cases ***
-Test1 Update Group
+Delete Group
     Open Network Inventory
     Expand Network Function
-    Expand AAA Group And Delete Test Group
+    Expand Node Group And Delete Test Group

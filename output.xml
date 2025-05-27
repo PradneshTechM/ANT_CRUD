@@ -1,1232 +1,172 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.11.4 on win32)" generated="2025-05-21T16:30:29.167254" rpa="false" schemaversion="5">
-<suite id="s1" name="CreateGroup test" source="C:\Users\pk0952\PycharmProjects\ANT_CRUD\tests\Zone_Management\CreateGroup_test.robot">
+<robot generator="Robot 7.2.2 (Python 3.11.4 on win32)" generated="2025-05-27T14:30:01.683395" rpa="false" schemaversion="5">
+<suite id="s1" name="Verify test" source="C:\Users\pk0952\PycharmProjects\ANT_CRUD\tests\NTC_Management\Verify_test.robot">
 <kw name="Login Once" owner="common" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:30:29.900554" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
-<msg time="2025-05-21T16:30:29.900554" level="INFO">Opening browser 'Chrome' to base url 'https://ant228.dev.att.com:8443'.</msg>
+<msg time="2025-05-27T14:30:02.300773" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
+<msg time="2025-05-27T14:30:02.301778" level="INFO">Opening browser 'Chrome' to base url 'https://ant228.dev.att.com:8443'.</msg>
 <arg>${URL}</arg>
 <arg>Chrome</arg>
 <arg>executable_path=${DRIVER_PATH}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-05-21T16:30:29.899553" elapsed="3.318733"/>
+<status status="PASS" start="2025-05-27T14:30:02.300773" elapsed="21.303078"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-05-21T16:30:33.219316" elapsed="0.088975"/>
+<status status="PASS" start="2025-05-27T14:30:23.603851" elapsed="0.854060"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>id=desktop_dropdown_button</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-05-21T16:30:33.309287" elapsed="0.044002"/>
+<status status="PASS" start="2025-05-27T14:30:24.458911" elapsed="0.036001"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:30:33.353289" level="INFO">Clicking element 'id=desktop_dropdown_button'.</msg>
+<msg time="2025-05-27T14:30:24.495914" level="INFO">Clicking element 'id=desktop_dropdown_button'.</msg>
 <arg>id=desktop_dropdown_button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-21T16:30:33.353289" elapsed="0.140832"/>
+<status status="PASS" start="2025-05-27T14:30:24.494912" elapsed="0.127003"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>id=WindowsAccountSelectId</arg>
 <arg>5s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-05-21T16:30:33.495121" elapsed="0.062603"/>
+<status status="PASS" start="2025-05-27T14:30:24.622910" elapsed="0.028001"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:30:33.558723" level="INFO">Clicking element 'id=WindowsAccountSelectId'.</msg>
+<msg time="2025-05-27T14:30:24.650911" level="INFO">Clicking element 'id=WindowsAccountSelectId'.</msg>
 <arg>id=WindowsAccountSelectId</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-21T16:30:33.557724" elapsed="0.125028"/>
+<status status="PASS" start="2025-05-27T14:30:24.650911" elapsed="0.088003"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>id=windowsSubmit</arg>
 <arg>5s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-05-21T16:30:33.683748" elapsed="0.034010"/>
+<status status="PASS" start="2025-05-27T14:30:24.738914" elapsed="0.022994"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:30:33.718724" level="INFO">Clicking element 'id=windowsSubmit'.</msg>
+<msg time="2025-05-27T14:30:24.761908" level="INFO">Clicking element 'id=windowsSubmit'.</msg>
 <arg>id=windowsSubmit</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-21T16:30:33.717758" elapsed="0.559967"/>
+<status status="PASS" start="2025-05-27T14:30:24.761908" elapsed="0.508082"/>
 </kw>
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>${PRIORITY_TEXT}</arg>
 <arg>60s</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2025-05-21T16:30:34.277725" elapsed="24.487981"/>
+<status status="PASS" start="2025-05-27T14:30:25.270997" elapsed="10.350225"/>
 </kw>
-<status status="PASS" start="2025-05-21T16:30:29.898551" elapsed="28.867155"/>
+<status status="PASS" start="2025-05-27T14:30:02.298773" elapsed="33.322449"/>
 </kw>
-<test id="s1-t1" name="Test1 Create Group" line="43">
+<test id="s1-t1" name="Verify test" line="31">
 <kw name="Open Network Inventory" owner="common">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:30:58.769704" level="INFO">Clicking element 'xpath=//figure[.//div[normalize-space(.)="Network Inventory"]]'.</msg>
+<msg time="2025-05-27T14:30:35.623227" level="INFO">Clicking element 'xpath=//figure[.//div[normalize-space(.)="Network Inventory"]]'.</msg>
 <arg>xpath=//figure[.//div[normalize-space(.)="Network Inventory"]]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-21T16:30:58.768707" elapsed="1.708665"/>
+<status status="PASS" start="2025-05-27T14:30:35.623227" elapsed="1.383831"/>
 </kw>
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>Network Inventory</arg>
 <arg>10s</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2025-05-21T16:31:00.477372" elapsed="0.033025"/>
+<status status="PASS" start="2025-05-27T14:30:37.007058" elapsed="0.094497"/>
 </kw>
-<status status="PASS" start="2025-05-21T16:30:58.767677" elapsed="1.742720"/>
+<status status="PASS" start="2025-05-27T14:30:35.622225" elapsed="1.480329"/>
 </kw>
 <kw name="Expand Network Function" owner="common">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:00.513399" level="INFO">Clicking element 'xpath=//md-list-item[.//p[normalize-space(.)="Zone Management"]]//button[contains(@class,"md-secondary")]'.</msg>
+<msg time="2025-05-27T14:30:37.103554" level="INFO">Clicking element 'xpath=//md-list-item[.//p[normalize-space(.)="NTC Management"]]//button[contains(@class,"md-secondary")]'.</msg>
 <arg>xpath=//md-list-item[.//p[normalize-space(.)="${Network_Element}"]]//button[contains(@class,"md-secondary")]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-21T16:31:00.513399" elapsed="0.139085"/>
+<status status="PASS" start="2025-05-27T14:30:37.102554" elapsed="0.220145"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=//span[normalize-space(.)="${Zone_Management_Node}"]</arg>
+<arg>xpath=//span[normalize-space(.)="${NTC_Management_Node}"]</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-05-21T16:31:00.652484" elapsed="0.338963"/>
+<status status="PASS" start="2025-05-27T14:30:37.323699" elapsed="0.041999"/>
 </kw>
-<status status="PASS" start="2025-05-21T16:31:00.512369" elapsed="0.479078"/>
+<status status="PASS" start="2025-05-27T14:30:37.102554" elapsed="0.263144"/>
 </kw>
-<kw name="Add Node">
+<kw name="Expand AAA Group And Locate Test Group">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=//ul[@id="subMenuItemsColumn"]//li[.//span[normalize-space(.)="${Zone_Management_Node}"]]//md-icon[@role="button" and contains(@md-svg-src,"ic_add_box_24px.svg")]</arg>
-<arg>15s</arg>
+<arg>xpath=//span[normalize-space(.)="${NTC_Management_Node}"]</arg>
+<arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-05-21T16:31:00.993449" elapsed="0.060999"/>
+<status status="PASS" start="2025-05-27T14:30:37.366698" elapsed="0.023003"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:01.055447" level="INFO">Clicking element 'xpath=//ul[@id="subMenuItemsColumn"]//li[.//span[normalize-space(.)="5EC"]]//md-icon[@role="button" and contains(@md-svg-src,"ic_add_box_24px.svg")]'.</msg>
-<arg>xpath=//ul[@id="subMenuItemsColumn"]//li[.//span[normalize-space(.)="${Zone_Management_Node}"]]//md-icon[@role="button" and contains(@md-svg-src,"ic_add_box_24px.svg")]</arg>
+<msg time="2025-05-27T14:30:37.390699" level="INFO">Clicking element 'xpath=//span[normalize-space(.)="List Of NTC's"]'.</msg>
+<arg>xpath=//span[normalize-space(.)="${NTC_Management_Node}"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-21T16:31:01.054448" elapsed="0.193017"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-05-21T16:31:04.248966" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-05-21T16:31:01.248478" elapsed="3.000488"/>
-</kw>
-<doc>Click the “+” icon under the AAA row</doc>
-<status status="PASS" start="2025-05-21T16:31:00.992449" elapsed="3.257516"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Fill Out Form">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-05-21T16:31:04.252964" level="INFO">${loc1} = //legend[normalize-space(.)="Zone Details"]</msg>
-<var>${loc1}</var>
-<arg>//legend[normalize-space(.)="${section_header}"]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-05-21T16:31:04.251934" elapsed="0.001030"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:04.282944" level="INFO">Current page contains element 'xpath=//legend[normalize-space(.)="Zone Details"]'.</msg>
-<arg>xpath=${loc1}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-05-21T16:31:04.253966" elapsed="0.028978"/>
-</kw>
-<arg>Page Should Contain Element</arg>
-<arg>xpath=${loc1}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2025-05-21T16:31:04.252964" elapsed="0.029980"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-05-21T16:31:04.283963" level="INFO">${loc2} = //legend[normalize-space(.)="Zone Details"]/following-sibling::div[1]</msg>
-<var>${loc2}</var>
-<arg>${loc1}/following-sibling::div[1]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-05-21T16:31:04.282944" elapsed="0.001019"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:04.306962" level="INFO">Current page contains element 'xpath=//legend[normalize-space(.)="Zone Details"]/following-sibling::div[1]'.</msg>
-<arg>xpath=${loc2}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-05-21T16:31:04.284962" elapsed="0.022000"/>
-</kw>
-<arg>Page Should Contain Element</arg>
-<arg>xpath=${loc2}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2025-05-21T16:31:04.283963" elapsed="0.024001"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-05-21T16:31:04.307964" level="INFO">${loc3} = //legend[normalize-space(.)="Zone Details"]/following-sibling::div[1]//label[normalize-space(.)="Name"]</msg>
-<var>${loc3}</var>
-<arg>${loc2}//label[normalize-space(.)="${label_text}"]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-05-21T16:31:04.307964" elapsed="0.000000"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:04.330966" level="INFO">Current page contains element 'xpath=//legend[normalize-space(.)="Zone Details"]/following-sibling::div[1]//label[normalize-space(.)="Name"]'.</msg>
-<arg>xpath=${loc3}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-05-21T16:31:04.308935" elapsed="0.022031"/>
-</kw>
-<arg>Page Should Contain Element</arg>
-<arg>xpath=${loc3}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2025-05-21T16:31:04.308935" elapsed="0.022031"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${loc3}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-05-21T16:31:04.331934" elapsed="0.001030"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:04.332964" level="INFO">Typing text 'test32' into text field '//legend[normalize-space(.)="Zone Details"]/following-sibling::div[1]//label[normalize-space(.)="Name"]/following-sibling::input'.</msg>
-<arg>${loc3}/following-sibling::input</arg>
-<arg>${value}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-21T16:31:04.332964" elapsed="0.219901"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-05-21T16:31:05.554718" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-05-21T16:31:04.553861" elapsed="1.000857"/>
-</kw>
-<arg>${section}</arg>
-<arg>${label}</arg>
-<arg>${value}</arg>
-<status status="PASS" start="2025-05-21T16:31:04.250965" elapsed="1.303753"/>
-</kw>
-<var name="${section}">Zone Details</var>
-<var name="${label}">Name</var>
-<var name="${value}">test32</var>
-<status status="PASS" start="2025-05-21T16:31:04.250965" elapsed="1.303753"/>
-</iter>
-<iter>
-<kw name="Fill Out Form">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-05-21T16:31:05.557715" level="INFO">${loc1} = //legend[normalize-space(.)="Zone Details"]</msg>
-<var>${loc1}</var>
-<arg>//legend[normalize-space(.)="${section_header}"]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-05-21T16:31:05.556717" elapsed="0.000998"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:05.583717" level="INFO">Current page contains element 'xpath=//legend[normalize-space(.)="Zone Details"]'.</msg>
-<arg>xpath=${loc1}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-05-21T16:31:05.558715" elapsed="0.025002"/>
-</kw>
-<arg>Page Should Contain Element</arg>
-<arg>xpath=${loc1}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2025-05-21T16:31:05.557715" elapsed="0.026002"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-05-21T16:31:05.584715" level="INFO">${loc2} = //legend[normalize-space(.)="Zone Details"]/following-sibling::div[1]</msg>
-<var>${loc2}</var>
-<arg>${loc1}/following-sibling::div[1]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-05-21T16:31:05.583717" elapsed="0.000998"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:05.601695" level="INFO">Current page contains element 'xpath=//legend[normalize-space(.)="Zone Details"]/following-sibling::div[1]'.</msg>
-<arg>xpath=${loc2}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-05-21T16:31:05.585714" elapsed="0.016979"/>
-</kw>
-<arg>Page Should Contain Element</arg>
-<arg>xpath=${loc2}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2025-05-21T16:31:05.584715" elapsed="0.017978"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-05-21T16:31:05.603692" level="INFO">${loc3} = //legend[normalize-space(.)="Zone Details"]/following-sibling::div[1]//label[normalize-space(.)="Release"]</msg>
-<var>${loc3}</var>
-<arg>${loc2}//label[normalize-space(.)="${label_text}"]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-05-21T16:31:05.602693" elapsed="0.000999"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:05.625684" level="INFO">Current page contains element 'xpath=//legend[normalize-space(.)="Zone Details"]/following-sibling::div[1]//label[normalize-space(.)="Release"]'.</msg>
-<arg>xpath=${loc3}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-05-21T16:31:05.603692" elapsed="0.021992"/>
-</kw>
-<arg>Page Should Contain Element</arg>
-<arg>xpath=${loc3}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2025-05-21T16:31:05.603692" elapsed="0.021992"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${loc3}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-05-21T16:31:05.625684" elapsed="0.001049"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:05.627692" level="INFO">Typing text 'test32' into text field '//legend[normalize-space(.)="Zone Details"]/following-sibling::div[1]//label[normalize-space(.)="Release"]/following-sibling::input'.</msg>
-<arg>${loc3}/following-sibling::input</arg>
-<arg>${value}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-21T16:31:05.626733" elapsed="0.191976"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-05-21T16:31:06.820504" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-05-21T16:31:05.819710" elapsed="1.000794"/>
-</kw>
-<arg>${section}</arg>
-<arg>${label}</arg>
-<arg>${value}</arg>
-<status status="PASS" start="2025-05-21T16:31:05.555687" elapsed="1.264817"/>
-</kw>
-<var name="${section}">Zone Details</var>
-<var name="${label}">Release</var>
-<var name="${value}">test32</var>
-<status status="PASS" start="2025-05-21T16:31:05.555687" elapsed="1.265866"/>
-</iter>
-<iter>
-<kw name="Fill Out Form">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-05-21T16:31:06.824561" level="INFO">${loc1} = //legend[normalize-space(.)="Zone Details"]</msg>
-<var>${loc1}</var>
-<arg>//legend[normalize-space(.)="${section_header}"]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-05-21T16:31:06.823537" elapsed="0.001024"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:06.849539" level="INFO">Current page contains element 'xpath=//legend[normalize-space(.)="Zone Details"]'.</msg>
-<arg>xpath=${loc1}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-05-21T16:31:06.825538" elapsed="0.024998"/>
-</kw>
-<arg>Page Should Contain Element</arg>
-<arg>xpath=${loc1}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2025-05-21T16:31:06.825538" elapsed="0.024998"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-05-21T16:31:06.851539" level="INFO">${loc2} = //legend[normalize-space(.)="Zone Details"]/following-sibling::div[1]</msg>
-<var>${loc2}</var>
-<arg>${loc1}/following-sibling::div[1]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-05-21T16:31:06.850536" elapsed="0.001003"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:06.869528" level="INFO">Current page contains element 'xpath=//legend[normalize-space(.)="Zone Details"]/following-sibling::div[1]'.</msg>
-<arg>xpath=${loc2}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-05-21T16:31:06.852538" elapsed="0.017973"/>
-</kw>
-<arg>Page Should Contain Element</arg>
-<arg>xpath=${loc2}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2025-05-21T16:31:06.851539" elapsed="0.018972"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-05-21T16:31:06.871502" level="INFO">${loc3} = //legend[normalize-space(.)="Zone Details"]/following-sibling::div[1]//label[normalize-space(.)="Execution Limit"]</msg>
-<var>${loc3}</var>
-<arg>${loc2}//label[normalize-space(.)="${label_text}"]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-05-21T16:31:06.871502" elapsed="0.000000"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:06.898535" level="INFO">Current page contains element 'xpath=//legend[normalize-space(.)="Zone Details"]/following-sibling::div[1]//label[normalize-space(.)="Execution Limit"]'.</msg>
-<arg>xpath=${loc3}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-05-21T16:31:06.872512" elapsed="0.026023"/>
-</kw>
-<arg>Page Should Contain Element</arg>
-<arg>xpath=${loc3}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2025-05-21T16:31:06.872512" elapsed="0.026023"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${loc3}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-05-21T16:31:06.899539" elapsed="0.001966"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:06.902553" level="INFO">Typing text '1' into text field '//legend[normalize-space(.)="Zone Details"]/following-sibling::div[1]//label[normalize-space(.)="Execution Limit"]/following-sibling::input'.</msg>
-<arg>${loc3}/following-sibling::input</arg>
-<arg>${value}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-21T16:31:06.901505" elapsed="0.171023"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-05-21T16:31:08.073663" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-05-21T16:31:07.072528" elapsed="1.001135"/>
-</kw>
-<arg>${section}</arg>
-<arg>${label}</arg>
-<arg>${value}</arg>
-<status status="PASS" start="2025-05-21T16:31:06.822567" elapsed="1.251096"/>
-</kw>
-<var name="${section}">Zone Details</var>
-<var name="${label}">Execution Limit</var>
-<var name="${value}">1</var>
-<status status="PASS" start="2025-05-21T16:31:06.821553" elapsed="1.253112"/>
-</iter>
-<iter>
-<kw name="Fill Out Form">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-05-21T16:31:08.076665" level="INFO">${loc1} = //legend[normalize-space(.)="Access Details"]</msg>
-<var>${loc1}</var>
-<arg>//legend[normalize-space(.)="${section_header}"]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-05-21T16:31:08.076665" elapsed="0.000000"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:08.108663" level="INFO">Current page contains element 'xpath=//legend[normalize-space(.)="Access Details"]'.</msg>
-<arg>xpath=${loc1}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-05-21T16:31:08.077664" elapsed="0.031997"/>
-</kw>
-<arg>Page Should Contain Element</arg>
-<arg>xpath=${loc1}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2025-05-21T16:31:08.077664" elapsed="0.031997"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-05-21T16:31:08.110663" level="INFO">${loc2} = //legend[normalize-space(.)="Access Details"]/following-sibling::div[1]</msg>
-<var>${loc2}</var>
-<arg>${loc1}/following-sibling::div[1]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-05-21T16:31:08.109661" elapsed="0.001002"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:08.138660" level="INFO">Current page contains element 'xpath=//legend[normalize-space(.)="Access Details"]/following-sibling::div[1]'.</msg>
-<arg>xpath=${loc2}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-05-21T16:31:08.111663" elapsed="0.026997"/>
-</kw>
-<arg>Page Should Contain Element</arg>
-<arg>xpath=${loc2}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2025-05-21T16:31:08.110663" elapsed="0.027997"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-05-21T16:31:08.139661" level="INFO">${loc3} = //legend[normalize-space(.)="Access Details"]/following-sibling::div[1]//label[normalize-space(.)="Project ID"]</msg>
-<var>${loc3}</var>
-<arg>${loc2}//label[normalize-space(.)="${label_text}"]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-05-21T16:31:08.139661" elapsed="0.000971"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:08.164659" level="INFO">Current page contains element 'xpath=//legend[normalize-space(.)="Access Details"]/following-sibling::div[1]//label[normalize-space(.)="Project ID"]'.</msg>
-<arg>xpath=${loc3}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-05-21T16:31:08.140632" elapsed="0.024027"/>
-</kw>
-<arg>Page Should Contain Element</arg>
-<arg>xpath=${loc3}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2025-05-21T16:31:08.140632" elapsed="0.025027"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${loc3}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-05-21T16:31:08.165659" elapsed="0.001973"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:08.168661" level="INFO">Typing text 'test32' into text field '//legend[normalize-space(.)="Access Details"]/following-sibling::div[1]//label[normalize-space(.)="Project ID"]/following-sibling::input'.</msg>
-<arg>${loc3}/following-sibling::input</arg>
-<arg>${value}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-21T16:31:08.167632" elapsed="0.198775"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-05-21T16:31:09.368311" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-05-21T16:31:08.367407" elapsed="1.000904"/>
-</kw>
-<arg>${section}</arg>
-<arg>${label}</arg>
-<arg>${value}</arg>
-<status status="PASS" start="2025-05-21T16:31:08.075669" elapsed="1.292642"/>
-</kw>
-<var name="${section}">Access Details</var>
-<var name="${label}">Project ID</var>
-<var name="${value}">test32</var>
-<status status="PASS" start="2025-05-21T16:31:08.074665" elapsed="1.294648"/>
-</iter>
-<iter>
-<kw name="Fill Out Form">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-05-21T16:31:09.371312" level="INFO">${loc1} = //legend[normalize-space(.)="Access Details"]</msg>
-<var>${loc1}</var>
-<arg>//legend[normalize-space(.)="${section_header}"]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-05-21T16:31:09.371312" elapsed="0.000000"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:09.393896" level="INFO">Current page contains element 'xpath=//legend[normalize-space(.)="Access Details"]'.</msg>
-<arg>xpath=${loc1}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-05-21T16:31:09.372289" elapsed="0.021607"/>
-</kw>
-<arg>Page Should Contain Element</arg>
-<arg>xpath=${loc1}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2025-05-21T16:31:09.372289" elapsed="0.021607"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-05-21T16:31:09.394942" level="INFO">${loc2} = //legend[normalize-space(.)="Access Details"]/following-sibling::div[1]</msg>
-<var>${loc2}</var>
-<arg>${loc1}/following-sibling::div[1]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-05-21T16:31:09.394942" elapsed="0.000000"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:09.412944" level="INFO">Current page contains element 'xpath=//legend[normalize-space(.)="Access Details"]/following-sibling::div[1]'.</msg>
-<arg>xpath=${loc2}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-05-21T16:31:09.395941" elapsed="0.017003"/>
-</kw>
-<arg>Page Should Contain Element</arg>
-<arg>xpath=${loc2}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2025-05-21T16:31:09.394942" elapsed="0.018002"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-05-21T16:31:09.413941" level="INFO">${loc3} = //legend[normalize-space(.)="Access Details"]/following-sibling::div[1]//label[normalize-space(.)="Network URL"]</msg>
-<var>${loc3}</var>
-<arg>${loc2}//label[normalize-space(.)="${label_text}"]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-05-21T16:31:09.412944" elapsed="0.000997"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:09.443909" level="INFO">Current page contains element 'xpath=//legend[normalize-space(.)="Access Details"]/following-sibling::div[1]//label[normalize-space(.)="Network URL"]'.</msg>
-<arg>xpath=${loc3}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-05-21T16:31:09.414940" elapsed="0.028969"/>
-</kw>
-<arg>Page Should Contain Element</arg>
-<arg>xpath=${loc3}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2025-05-21T16:31:09.413941" elapsed="0.029968"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${loc3}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-05-21T16:31:09.444910" elapsed="0.001249"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:09.447202" level="INFO">Typing text 'https://testlocal' into text field '//legend[normalize-space(.)="Access Details"]/following-sibling::div[1]//label[normalize-space(.)="Network URL"]/following-sibling::input'.</msg>
-<arg>${loc3}/following-sibling::input</arg>
-<arg>${value}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-21T16:31:09.446159" elapsed="0.256659"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-05-21T16:31:10.703940" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-05-21T16:31:09.702818" elapsed="1.001122"/>
-</kw>
-<arg>${section}</arg>
-<arg>${label}</arg>
-<arg>${value}</arg>
-<status status="PASS" start="2025-05-21T16:31:09.370313" elapsed="1.334591"/>
-</kw>
-<var name="${section}">Access Details</var>
-<var name="${label}">Network URL</var>
-<var name="${value}">https://testlocal</var>
-<status status="PASS" start="2025-05-21T16:31:09.369313" elapsed="1.335591"/>
-</iter>
-<iter>
-<kw name="Fill Out Form">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-05-21T16:31:10.707938" level="INFO">${loc1} = //legend[normalize-space(.)="Access Details"]</msg>
-<var>${loc1}</var>
-<arg>//legend[normalize-space(.)="${section_header}"]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-05-21T16:31:10.706936" elapsed="0.001002"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:10.732960" level="INFO">Current page contains element 'xpath=//legend[normalize-space(.)="Access Details"]'.</msg>
-<arg>xpath=${loc1}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-05-21T16:31:10.708938" elapsed="0.024022"/>
-</kw>
-<arg>Page Should Contain Element</arg>
-<arg>xpath=${loc1}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2025-05-21T16:31:10.707938" elapsed="0.025022"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-05-21T16:31:10.733902" level="INFO">${loc2} = //legend[normalize-space(.)="Access Details"]/following-sibling::div[1]</msg>
-<var>${loc2}</var>
-<arg>${loc1}/following-sibling::div[1]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-05-21T16:31:10.733902" elapsed="0.000000"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:10.752937" level="INFO">Current page contains element 'xpath=//legend[normalize-space(.)="Access Details"]/following-sibling::div[1]'.</msg>
-<arg>xpath=${loc2}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-05-21T16:31:10.734963" elapsed="0.017974"/>
-</kw>
-<arg>Page Should Contain Element</arg>
-<arg>xpath=${loc2}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2025-05-21T16:31:10.733902" elapsed="0.020033"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-05-21T16:31:10.754936" level="INFO">${loc3} = //legend[normalize-space(.)="Access Details"]/following-sibling::div[1]//label[normalize-space(.)="Port URL"]</msg>
-<var>${loc3}</var>
-<arg>${loc2}//label[normalize-space(.)="${label_text}"]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-05-21T16:31:10.753935" elapsed="0.001001"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:10.779935" level="INFO">Current page contains element 'xpath=//legend[normalize-space(.)="Access Details"]/following-sibling::div[1]//label[normalize-space(.)="Port URL"]'.</msg>
-<arg>xpath=${loc3}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-05-21T16:31:10.755935" elapsed="0.025007"/>
-</kw>
-<arg>Page Should Contain Element</arg>
-<arg>xpath=${loc3}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2025-05-21T16:31:10.754936" elapsed="0.026006"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${loc3}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-05-21T16:31:10.780942" elapsed="0.001011"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:10.782935" level="INFO">Typing text 'https://testlocal' into text field '//legend[normalize-space(.)="Access Details"]/following-sibling::div[1]//label[normalize-space(.)="Port URL"]/following-sibling::input'.</msg>
-<arg>${loc3}/following-sibling::input</arg>
-<arg>${value}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-21T16:31:10.782935" elapsed="0.286963"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-05-21T16:31:12.071363" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-05-21T16:31:11.069898" elapsed="1.001465"/>
-</kw>
-<arg>${section}</arg>
-<arg>${label}</arg>
-<arg>${value}</arg>
-<status status="PASS" start="2025-05-21T16:31:10.705905" elapsed="1.365458"/>
-</kw>
-<var name="${section}">Access Details</var>
-<var name="${label}">Port URL</var>
-<var name="${value}">https://testlocal</var>
-<status status="PASS" start="2025-05-21T16:31:10.704904" elapsed="1.367460"/>
-</iter>
-<iter>
-<kw name="Fill Out Form">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-05-21T16:31:12.074365" level="INFO">${loc1} = //legend[normalize-space(.)="Access Details"]</msg>
-<var>${loc1}</var>
-<arg>//legend[normalize-space(.)="${section_header}"]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-05-21T16:31:12.074365" elapsed="0.000000"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:12.096343" level="INFO">Current page contains element 'xpath=//legend[normalize-space(.)="Access Details"]'.</msg>
-<arg>xpath=${loc1}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-05-21T16:31:12.075365" elapsed="0.020978"/>
-</kw>
-<arg>Page Should Contain Element</arg>
-<arg>xpath=${loc1}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2025-05-21T16:31:12.075365" elapsed="0.020978"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-05-21T16:31:12.097363" level="INFO">${loc2} = //legend[normalize-space(.)="Access Details"]/following-sibling::div[1]</msg>
-<var>${loc2}</var>
-<arg>${loc1}/following-sibling::div[1]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-05-21T16:31:12.096343" elapsed="0.001020"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:12.113333" level="INFO">Current page contains element 'xpath=//legend[normalize-space(.)="Access Details"]/following-sibling::div[1]'.</msg>
-<arg>xpath=${loc2}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-05-21T16:31:12.098365" elapsed="0.014968"/>
-</kw>
-<arg>Page Should Contain Element</arg>
-<arg>xpath=${loc2}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2025-05-21T16:31:12.097363" elapsed="0.015970"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-05-21T16:31:12.114364" level="INFO">${loc3} = //legend[normalize-space(.)="Access Details"]/following-sibling::div[1]//label[normalize-space(.)="Server URL"]</msg>
-<var>${loc3}</var>
-<arg>${loc2}//label[normalize-space(.)="${label_text}"]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-05-21T16:31:12.114364" elapsed="0.000976"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:12.142362" level="INFO">Current page contains element 'xpath=//legend[normalize-space(.)="Access Details"]/following-sibling::div[1]//label[normalize-space(.)="Server URL"]'.</msg>
-<arg>xpath=${loc3}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-05-21T16:31:12.115340" elapsed="0.027022"/>
-</kw>
-<arg>Page Should Contain Element</arg>
-<arg>xpath=${loc3}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2025-05-21T16:31:12.115340" elapsed="0.027022"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${loc3}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-05-21T16:31:12.142362" elapsed="0.002000"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:12.145361" level="INFO">Typing text 'https://testlocal' into text field '//legend[normalize-space(.)="Access Details"]/following-sibling::div[1]//label[normalize-space(.)="Server URL"]/following-sibling::input'.</msg>
-<arg>${loc3}/following-sibling::input</arg>
-<arg>${value}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-21T16:31:12.144362" elapsed="0.238100"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-05-21T16:31:13.384190" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-05-21T16:31:12.383029" elapsed="1.001161"/>
-</kw>
-<arg>${section}</arg>
-<arg>${label}</arg>
-<arg>${value}</arg>
-<status status="PASS" start="2025-05-21T16:31:12.073365" elapsed="1.311364"/>
-</kw>
-<var name="${section}">Access Details</var>
-<var name="${label}">Server URL</var>
-<var name="${value}">https://testlocal</var>
-<status status="PASS" start="2025-05-21T16:31:12.072364" elapsed="1.312365"/>
-</iter>
-<iter>
-<kw name="Fill Out Form">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-05-21T16:31:13.387557" level="INFO">${loc1} = //legend[normalize-space(.)="Access Details"]</msg>
-<var>${loc1}</var>
-<arg>//legend[normalize-space(.)="${section_header}"]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-05-21T16:31:13.386988" elapsed="0.000569"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:13.408658" level="INFO">Current page contains element 'xpath=//legend[normalize-space(.)="Access Details"]'.</msg>
-<arg>xpath=${loc1}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-05-21T16:31:13.388694" elapsed="0.019964"/>
-</kw>
-<arg>Page Should Contain Element</arg>
-<arg>xpath=${loc1}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2025-05-21T16:31:13.388125" elapsed="0.020533"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-05-21T16:31:13.409657" level="INFO">${loc2} = //legend[normalize-space(.)="Access Details"]/following-sibling::div[1]</msg>
-<var>${loc2}</var>
-<arg>${loc1}/following-sibling::div[1]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-05-21T16:31:13.409657" elapsed="0.000000"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:13.427659" level="INFO">Current page contains element 'xpath=//legend[normalize-space(.)="Access Details"]/following-sibling::div[1]'.</msg>
-<arg>xpath=${loc2}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-05-21T16:31:13.411656" elapsed="0.016003"/>
-</kw>
-<arg>Page Should Contain Element</arg>
-<arg>xpath=${loc2}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2025-05-21T16:31:13.410657" elapsed="0.017002"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-05-21T16:31:13.428658" level="INFO">${loc3} = //legend[normalize-space(.)="Access Details"]/following-sibling::div[1]//label[normalize-space(.)="Hypervisor URL"]</msg>
-<var>${loc3}</var>
-<arg>${loc2}//label[normalize-space(.)="${label_text}"]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-05-21T16:31:13.428658" elapsed="0.000000"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:13.454713" level="INFO">Current page contains element 'xpath=//legend[normalize-space(.)="Access Details"]/following-sibling::div[1]//label[normalize-space(.)="Hypervisor URL"]'.</msg>
-<arg>xpath=${loc3}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-05-21T16:31:13.429657" elapsed="0.025056"/>
-</kw>
-<arg>Page Should Contain Element</arg>
-<arg>xpath=${loc3}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2025-05-21T16:31:13.429657" elapsed="0.025056"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${loc3}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-05-21T16:31:13.454713" elapsed="0.002000"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:13.457713" level="INFO">Typing text 'https://testlocal' into text field '//legend[normalize-space(.)="Access Details"]/following-sibling::div[1]//label[normalize-space(.)="Hypervisor URL"]/following-sibling::input'.</msg>
-<arg>${loc3}/following-sibling::input</arg>
-<arg>${value}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-21T16:31:13.456713" elapsed="0.221026"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-05-21T16:31:14.678090" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-05-21T16:31:13.677739" elapsed="1.000351"/>
-</kw>
-<arg>${section}</arg>
-<arg>${label}</arg>
-<arg>${value}</arg>
-<status status="PASS" start="2025-05-21T16:31:13.385880" elapsed="1.292210"/>
-</kw>
-<var name="${section}">Access Details</var>
-<var name="${label}">Hypervisor URL</var>
-<var name="${value}">https://testlocal</var>
-<status status="PASS" start="2025-05-21T16:31:13.385299" elapsed="1.292791"/>
-</iter>
-<iter>
-<kw name="Fill Out Form">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-05-21T16:31:14.680147" level="INFO">${loc1} = //legend[normalize-space(.)="Access Details"]</msg>
-<var>${loc1}</var>
-<arg>//legend[normalize-space(.)="${section_header}"]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-05-21T16:31:14.680147" elapsed="0.000000"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:14.701148" level="INFO">Current page contains element 'xpath=//legend[normalize-space(.)="Access Details"]'.</msg>
-<arg>xpath=${loc1}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-05-21T16:31:14.681143" elapsed="0.020965"/>
-</kw>
-<arg>Page Should Contain Element</arg>
-<arg>xpath=${loc1}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2025-05-21T16:31:14.680147" elapsed="0.021961"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-05-21T16:31:14.703140" level="INFO">${loc2} = //legend[normalize-space(.)="Access Details"]/following-sibling::div[1]</msg>
-<var>${loc2}</var>
-<arg>${loc1}/following-sibling::div[1]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-05-21T16:31:14.702108" elapsed="0.001032"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:14.722142" level="INFO">Current page contains element 'xpath=//legend[normalize-space(.)="Access Details"]/following-sibling::div[1]'.</msg>
-<arg>xpath=${loc2}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-05-21T16:31:14.704144" elapsed="0.017998"/>
-</kw>
-<arg>Page Should Contain Element</arg>
-<arg>xpath=${loc2}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2025-05-21T16:31:14.703140" elapsed="0.020024"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-05-21T16:31:14.724173" level="INFO">${loc3} = //legend[normalize-space(.)="Access Details"]/following-sibling::div[1]//label[normalize-space(.)="Flavor URL"]</msg>
-<var>${loc3}</var>
-<arg>${loc2}//label[normalize-space(.)="${label_text}"]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-05-21T16:31:14.723164" elapsed="0.001009"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:14.747139" level="INFO">Current page contains element 'xpath=//legend[normalize-space(.)="Access Details"]/following-sibling::div[1]//label[normalize-space(.)="Flavor URL"]'.</msg>
-<arg>xpath=${loc3}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-05-21T16:31:14.724173" elapsed="0.023970"/>
-</kw>
-<arg>Page Should Contain Element</arg>
-<arg>xpath=${loc3}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2025-05-21T16:31:14.724173" elapsed="0.023970"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${loc3}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-05-21T16:31:14.748143" elapsed="0.000997"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:14.750139" level="INFO">Typing text 'https://testlocal' into text field '//legend[normalize-space(.)="Access Details"]/following-sibling::div[1]//label[normalize-space(.)="Flavor URL"]/following-sibling::input'.</msg>
-<arg>${loc3}/following-sibling::input</arg>
-<arg>${value}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-21T16:31:14.750139" elapsed="0.223965"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-05-21T16:31:15.975297" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-05-21T16:31:14.975105" elapsed="1.000192"/>
-</kw>
-<arg>${section}</arg>
-<arg>${label}</arg>
-<arg>${value}</arg>
-<status status="PASS" start="2025-05-21T16:31:14.679141" elapsed="1.296156"/>
-</kw>
-<var name="${section}">Access Details</var>
-<var name="${label}">Flavor URL</var>
-<var name="${value}">https://testlocal</var>
-<status status="PASS" start="2025-05-21T16:31:14.679141" elapsed="1.297157"/>
-</iter>
-<iter>
-<kw name="Fill Out Form">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-05-21T16:31:15.979307" level="INFO">${loc1} = //legend[normalize-space(.)="Access Details"]</msg>
-<var>${loc1}</var>
-<arg>//legend[normalize-space(.)="${section_header}"]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-05-21T16:31:15.978298" elapsed="0.001009"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:16.004264" level="INFO">Current page contains element 'xpath=//legend[normalize-space(.)="Access Details"]'.</msg>
-<arg>xpath=${loc1}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-05-21T16:31:15.980296" elapsed="0.023968"/>
-</kw>
-<arg>Page Should Contain Element</arg>
-<arg>xpath=${loc1}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2025-05-21T16:31:15.979307" elapsed="0.024957"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-05-21T16:31:16.005264" level="INFO">${loc2} = //legend[normalize-space(.)="Access Details"]/following-sibling::div[1]</msg>
-<var>${loc2}</var>
-<arg>${loc1}/following-sibling::div[1]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-05-21T16:31:16.004264" elapsed="0.001000"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:16.026294" level="INFO">Current page contains element 'xpath=//legend[normalize-space(.)="Access Details"]/following-sibling::div[1]'.</msg>
-<arg>xpath=${loc2}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-05-21T16:31:16.006262" elapsed="0.020032"/>
-</kw>
-<arg>Page Should Contain Element</arg>
-<arg>xpath=${loc2}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2025-05-21T16:31:16.005264" elapsed="0.021030"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-05-21T16:31:16.027295" level="INFO">${loc3} = //legend[normalize-space(.)="Access Details"]/following-sibling::div[1]//label[normalize-space(.)="URL for Token"]</msg>
-<var>${loc3}</var>
-<arg>${loc2}//label[normalize-space(.)="${label_text}"]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-05-21T16:31:16.026294" elapsed="0.001001"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:16.055293" level="INFO">Current page contains element 'xpath=//legend[normalize-space(.)="Access Details"]/following-sibling::div[1]//label[normalize-space(.)="URL for Token"]'.</msg>
-<arg>xpath=${loc3}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-05-21T16:31:16.028298" elapsed="0.026995"/>
-</kw>
-<arg>Page Should Contain Element</arg>
-<arg>xpath=${loc3}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2025-05-21T16:31:16.027295" elapsed="0.027998"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${loc3}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-05-21T16:31:16.055293" elapsed="0.000972"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:16.057298" level="INFO">Typing text 'https://testlocal' into text field '//legend[normalize-space(.)="Access Details"]/following-sibling::div[1]//label[normalize-space(.)="URL for Token"]/following-sibling::input'.</msg>
-<arg>${loc3}/following-sibling::input</arg>
-<arg>${value}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-21T16:31:16.057298" elapsed="0.241961"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-05-21T16:31:17.300481" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-05-21T16:31:16.300265" elapsed="1.000216"/>
-</kw>
-<arg>${section}</arg>
-<arg>${label}</arg>
-<arg>${value}</arg>
-<status status="PASS" start="2025-05-21T16:31:15.977297" elapsed="1.323184"/>
-</kw>
-<var name="${section}">Access Details</var>
-<var name="${label}">URL for Token</var>
-<var name="${value}">https://testlocal</var>
-<status status="PASS" start="2025-05-21T16:31:15.976298" elapsed="1.324183"/>
-</iter>
-<iter>
-<kw name="Fill Out Form">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-05-21T16:31:17.303481" level="INFO">${loc1} = //legend[normalize-space(.)="Access Details"]</msg>
-<var>${loc1}</var>
-<arg>//legend[normalize-space(.)="${section_header}"]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-05-21T16:31:17.302480" elapsed="0.001001"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:17.325473" level="INFO">Current page contains element 'xpath=//legend[normalize-space(.)="Access Details"]'.</msg>
-<arg>xpath=${loc1}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-05-21T16:31:17.304479" elapsed="0.021998"/>
-</kw>
-<arg>Page Should Contain Element</arg>
-<arg>xpath=${loc1}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2025-05-21T16:31:17.303481" elapsed="0.022996"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-05-21T16:31:17.327478" level="INFO">${loc2} = //legend[normalize-space(.)="Access Details"]/following-sibling::div[1]</msg>
-<var>${loc2}</var>
-<arg>${loc1}/following-sibling::div[1]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-05-21T16:31:17.326477" elapsed="0.001001"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:17.344455" level="INFO">Current page contains element 'xpath=//legend[normalize-space(.)="Access Details"]/following-sibling::div[1]'.</msg>
-<arg>xpath=${loc2}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-05-21T16:31:17.327478" elapsed="0.016977"/>
-</kw>
-<arg>Page Should Contain Element</arg>
-<arg>xpath=${loc2}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2025-05-21T16:31:17.327478" elapsed="0.016977"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-05-21T16:31:17.345477" level="INFO">${loc3} = //legend[normalize-space(.)="Access Details"]/following-sibling::div[1]//label[normalize-space(.)="User Name"]</msg>
-<var>${loc3}</var>
-<arg>${loc2}//label[normalize-space(.)="${label_text}"]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-05-21T16:31:17.345477" elapsed="0.001001"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:17.368455" level="INFO">Current page contains element 'xpath=//legend[normalize-space(.)="Access Details"]/following-sibling::div[1]//label[normalize-space(.)="User Name"]'.</msg>
-<arg>xpath=${loc3}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-05-21T16:31:17.346478" elapsed="0.023000"/>
-</kw>
-<arg>Page Should Contain Element</arg>
-<arg>xpath=${loc3}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2025-05-21T16:31:17.346478" elapsed="0.023000"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${loc3}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-05-21T16:31:17.369478" elapsed="0.001970"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:17.372497" level="INFO">Typing text 'test' into text field '//legend[normalize-space(.)="Access Details"]/following-sibling::div[1]//label[normalize-space(.)="User Name"]/following-sibling::input'.</msg>
-<arg>${loc3}/following-sibling::input</arg>
-<arg>${value}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-21T16:31:17.371448" elapsed="0.190621"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-05-21T16:31:18.563448" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-05-21T16:31:17.562069" elapsed="1.001379"/>
-</kw>
-<arg>${section}</arg>
-<arg>${label}</arg>
-<arg>${value}</arg>
-<status status="PASS" start="2025-05-21T16:31:17.301450" elapsed="1.261998"/>
-</kw>
-<var name="${section}">Access Details</var>
-<var name="${label}">User Name</var>
-<var name="${value}">test</var>
-<status status="PASS" start="2025-05-21T16:31:17.301450" elapsed="1.262995"/>
-</iter>
-<iter>
-<kw name="Fill Out Form">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-05-21T16:31:18.566445" level="INFO">${loc1} = //legend[normalize-space(.)="Access Details"]</msg>
-<var>${loc1}</var>
-<arg>//legend[normalize-space(.)="${section_header}"]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-05-21T16:31:18.566445" elapsed="0.000000"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:18.592449" level="INFO">Current page contains element 'xpath=//legend[normalize-space(.)="Access Details"]'.</msg>
-<arg>xpath=${loc1}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-05-21T16:31:18.568390" elapsed="0.024059"/>
-</kw>
-<arg>Page Should Contain Element</arg>
-<arg>xpath=${loc1}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2025-05-21T16:31:18.567830" elapsed="0.024619"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-05-21T16:31:18.593422" level="INFO">${loc2} = //legend[normalize-space(.)="Access Details"]/following-sibling::div[1]</msg>
-<var>${loc2}</var>
-<arg>${loc1}/following-sibling::div[1]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-05-21T16:31:18.593422" elapsed="0.000000"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:18.612422" level="INFO">Current page contains element 'xpath=//legend[normalize-space(.)="Access Details"]/following-sibling::div[1]'.</msg>
-<arg>xpath=${loc2}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-05-21T16:31:18.594440" elapsed="0.018987"/>
-</kw>
-<arg>Page Should Contain Element</arg>
-<arg>xpath=${loc2}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2025-05-21T16:31:18.593422" elapsed="0.020005"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-05-21T16:31:18.614422" level="INFO">${loc3} = //legend[normalize-space(.)="Access Details"]/following-sibling::div[1]//label[normalize-space(.)="Password"]</msg>
-<var>${loc3}</var>
-<arg>${loc2}//label[normalize-space(.)="${label_text}"]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-05-21T16:31:18.613427" elapsed="0.000995"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:18.641392" level="INFO">Current page contains element 'xpath=//legend[normalize-space(.)="Access Details"]/following-sibling::div[1]//label[normalize-space(.)="Password"]'.</msg>
-<arg>xpath=${loc3}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2025-05-21T16:31:18.615443" elapsed="0.026983"/>
-</kw>
-<arg>Page Should Contain Element</arg>
-<arg>xpath=${loc3}</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2025-05-21T16:31:18.614422" elapsed="0.028004"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${loc3}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-05-21T16:31:18.642426" elapsed="0.001001"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:18.644420" level="INFO">Typing text 'test1' into text field '//legend[normalize-space(.)="Access Details"]/following-sibling::div[1]//label[normalize-space(.)="Password"]/following-sibling::input'.</msg>
-<arg>${loc3}/following-sibling::input</arg>
-<arg>${value}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-21T16:31:18.644420" elapsed="0.209968"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-05-21T16:31:19.856403" level="INFO">Slept 1 second.</msg>
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-05-21T16:31:18.855414" elapsed="1.000989"/>
-</kw>
-<arg>${section}</arg>
-<arg>${label}</arg>
-<arg>${value}</arg>
-<status status="PASS" start="2025-05-21T16:31:18.565422" elapsed="1.290981"/>
-</kw>
-<var name="${section}">Access Details</var>
-<var name="${label}">Password</var>
-<var name="${value}">test1</var>
-<status status="PASS" start="2025-05-21T16:31:18.564445" elapsed="1.292923"/>
-</iter>
-<var>${section}</var>
-<var>${label}</var>
-<var>${value}</var>
-<value>@{Zone_ENTRY_FILL_FIELDS}</value>
-<status status="PASS" start="2025-05-21T16:31:04.249965" elapsed="15.607403"/>
-</for>
-<for flavor="IN">
-<iter>
-<kw name="Dropdown Field">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-05-21T16:31:19.861364" level="INFO">${label_xpath} = //legend[normalize-space(.)="Zone Details"]/following-sibling::div//label[normalize-space(.)="NTC Name"]</msg>
-<var>${label_xpath}</var>
-<arg>//legend[normalize-space(.)="${section_header}"]/following-sibling::div//label[normalize-space(.)="${dropdown_label}"]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-05-21T16:31:19.861364" elapsed="0.000000"/>
-</kw>
-<kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:19.915397" level="INFO">${select_id} = ntc</msg>
-<var>${select_id}</var>
-<arg>xpath=${label_xpath}</arg>
-<arg>for</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2025-05-21T16:31:19.862397" elapsed="0.053000"/>
+<status status="PASS" start="2025-05-27T14:30:37.389701" elapsed="0.090000"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:19.916372" level="INFO">Clicking element 'id=ntc'.</msg>
-<arg>id=${select_id}</arg>
+<msg time="2025-05-27T14:30:37.480695" level="INFO">Clicking element 'xpath=//p[normalize-space(.)="ALLNTX"]'.</msg>
+<arg>xpath=//p[normalize-space(.)="${Cluster_name}"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-21T16:31:19.915397" elapsed="0.172991"/>
+<status status="PASS" start="2025-05-27T14:30:37.479701" elapsed="0.122994"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-05-21T16:31:23.089562" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
+<msg time="2025-05-27T14:30:42.604494" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-05-21T16:31:20.088388" elapsed="3.001174"/>
+<status status="PASS" start="2025-05-27T14:30:37.603698" elapsed="5.000796"/>
 </kw>
+<status status="PASS" start="2025-05-27T14:30:37.366698" elapsed="5.237796"/>
+</kw>
+<kw name="Verify Cluster">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-05-27T14:30:42.605494" level="INFO">${locator} = xpath=//li[.//p[normalize-space(.)='5EC']]/ul//li/p[normalize-space(.)='test32']</msg>
+<var>${locator}</var>
+<arg>xpath=//li[.//p[normalize-space(.)='${node}']]/ul//li/p[normalize-space(.)='${Test}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-05-27T14:30:42.605494" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-05-27T14:30:42.620494" level="INFO">Current page contains element 'xpath=//li[.//p[normalize-space(.)='5EC']]/ul//li/p[normalize-space(.)='test32']'.</msg>
+<arg>${locator}</arg>
+<arg>5s</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-05-27T14:30:42.606494" elapsed="0.014000"/>
+</kw>
+<msg time="2025-05-27T14:30:42.621496" level="INFO">${found} = True</msg>
+<var>${found}</var>
+<arg>Page Should Contain Element</arg>
+<arg>${locator}</arg>
+<arg>5s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-05-27T14:30:42.606494" elapsed="0.015002"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
 <kw name="Log To Console" owner="BuiltIn">
-<arg>xpath=//div[@class="md-select-menu-container multiSelectHeader md-active md-clickable"]//md-option[@value="${option_value}" and @role="option"]/div[@class="md-text ng-binding" and normalize-space(.)="${option_value}"]</arg>
+<arg>✅ Cluster “${Test}” found under “${node}”</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-05-21T16:31:23.089562" elapsed="0.002001"/>
+<status status="PASS" start="2025-05-27T14:30:42.621496" elapsed="0.001003"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-05-21T16:31:23.092535" level="INFO">Clicking element 'xpath=//div[@class="md-select-menu-container multiSelectHeader md-active md-clickable"]//md-option[@value="ALLNTX" and @role="option"]/div[@class="md-text ng-binding" and normalize-space(.)="ALLNTX"]'.</msg>
-<arg>xpath=//div[@class="md-select-menu-container multiSelectHeader md-active md-clickable"]//md-option[@value="${option_value}" and @role="option"]/div[@class="md-text ng-binding" and normalize-space(.)="${option_value}"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-21T16:31:23.092535" elapsed="0.165998"/>
+<arg>${found}</arg>
+<arg>Log To Console</arg>
+<arg>✅ Cluster “${Test}” found under “${node}”</arg>
+<arg>ELSE</arg>
+<arg>Fail</arg>
+<arg>❌ Cluster “${Test}” **NOT** found under “${node}”</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-05-27T14:30:42.621496" elapsed="0.001003"/>
 </kw>
-<arg>${section}</arg>
-<arg>${drp}</arg>
-<arg>${opt}</arg>
-<status status="PASS" start="2025-05-21T16:31:19.859421" elapsed="3.399112"/>
+<arg>${node_name}</arg>
+<arg>${Test_group}</arg>
+<status status="PASS" start="2025-05-27T14:30:42.604494" elapsed="0.018005"/>
 </kw>
-<var name="${section}">Zone Details</var>
-<var name="${drp}">NTC Name</var>
-<var name="${opt}">ALLNTX</var>
-<status status="PASS" start="2025-05-21T16:31:19.858366" elapsed="3.400167"/>
-</iter>
-<var>${section}</var>
-<var>${drp}</var>
-<var>${opt}</var>
-<value>@{Zone_Create_Dropdown_FIELD}</value>
-<status status="PASS" start="2025-05-21T16:31:19.858366" elapsed="3.400167"/>
-</for>
-<status status="PASS" start="2025-05-21T16:30:58.766682" elapsed="24.492850"/>
+<status status="PASS" start="2025-05-27T14:30:35.621222" elapsed="7.001277"/>
 </test>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-05-21T16:31:23.262550" elapsed="2.386995"/>
+<status status="PASS" start="2025-05-27T14:30:42.624496" elapsed="2.964260"/>
 </kw>
-<status status="PASS" start="2025-05-21T16:30:29.170251" elapsed="56.480319"/>
+<status status="PASS" start="2025-05-27T14:30:01.686393" elapsed="43.902363"/>
 </suite>
 <statistics>
 <total>
@@ -1235,11 +175,11 @@
 <tag>
 </tag>
 <suite>
-<stat name="CreateGroup test" id="s1" pass="1" fail="0" skip="0">CreateGroup test</stat>
+<stat name="Verify test" id="s1" pass="1" fail="0" skip="0">Verify test</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-05-21T16:30:29.889525" level="ERROR">Error in file 'C:\Users\pk0952\PycharmProjects\ANT_CRUD\Resources\common.robot' on line 3: Importing library 'AutoItLibrary' failed: com_error: (-2147319779, 'Library not registered.', None, None)
+<msg time="2025-05-27T14:30:02.290774" level="ERROR">Error in file 'C:\Users\pk0952\PycharmProjects\ANT_CRUD\Resources\NTC_Management\common.robot' on line 3: Importing library 'AutoItLibrary' failed: com_error: (-2147319779, 'Library not registered.', None, None)
 Traceback (most recent call last):
   File "C:\Users\pk0952\AppData\Roaming\Python\Python311\site-packages\AutoItLibrary\__init__.py", line 46, in &lt;module&gt;
     win32com.client.gencache.EnsureModule("{F8937E53-D444-4E71-9275-35B64210CC3B}", 0, 1, 0)
@@ -1262,6 +202,6 @@ PYTHONPATH:
   C:\Users\pk0952\AppData\Roaming\Python\Python311\site-packages\win32\lib
   C:\Users\pk0952\AppData\Roaming\Python\Python311\site-packages\Pythonwin
   C:\Program Files\Python311\Lib\site-packages</msg>
-<msg time="2025-05-21T16:30:29.900554" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
+<msg time="2025-05-27T14:30:02.300773" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
 </errors>
 </robot>

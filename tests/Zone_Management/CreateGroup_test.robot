@@ -1,14 +1,13 @@
 *** Settings ***
 Library          SeleniumLibrary
-Resource    ../../Resources/PNF/Variables.robot
-Resource    ../../Resources/common.robot
+Resource    ../../Resources/Zone_Management/variables.robot
+Resource    ../../Resources/Zone_Management/common.robot
 Suite Setup      Login Once
 Suite Teardown   Close Browser
 
 
 *** Keywords ***
 Add Node
-    [Documentation]    Click the “+” icon under the AAA row
     Wait Until Element Is Visible    xpath=//ul[@id="subMenuItemsColumn"]//li[.//span[normalize-space(.)="${Zone_Management_Node}"]]//md-icon[@role="button" and contains(@md-svg-src,"ic_add_box_24px.svg")]    15s
     Click Element                   xpath=//ul[@id="subMenuItemsColumn"]//li[.//span[normalize-space(.)="${Zone_Management_Node}"]]//md-icon[@role="button" and contains(@md-svg-src,"ic_add_box_24px.svg")]
     Sleep    3s
@@ -20,27 +19,47 @@ Fill Out Form
     Run Keyword And Continue On Failure    Page Should Contain Element    xpath=${loc2}
     ${loc3}=    Set Variable    ${loc2}//label[normalize-space(.)="${label_text}"]
     Run Keyword And Continue On Failure    Page Should Contain Element    xpath=${loc3}
-    Log To Console    ${loc3}
     Input Text                  ${loc3}/following-sibling::input    ${value}
     Sleep    1s
 
 Dropdown Field
-    [Arguments]    ${section_header}    ${dropdown_label}    ${option_value}
-    ${label_xpath}=    Set Variable    //legend[normalize-space(.)="${section_header}"]/following-sibling::div//label[normalize-space(.)="${dropdown_label}"]
-    ${select_id}=      Get Element Attribute    xpath=${label_xpath}    for
-    Click Element      id=${select_id}
+    [Arguments]      ${dropdown_label}    ${option_value}
+    Click Element      xpath=//label[@for="ntc" and normalize-space(.)="${dropdown_label}"]/following-sibling::md-select[@id="ntc"]
     Sleep              3s
-    Log To Console    xpath=//div[@class="md-select-menu-container multiSelectHeader md-active md-clickable"]//md-option[@value="${option_value}" and @role="option"]/div[@class="md-text ng-binding" and normalize-space(.)="${option_value}"]
-    Click Element    xpath=//div[@class="md-select-menu-container multiSelectHeader md-active md-clickable"]//md-option[@value="${option_value}" and @role="option"]/div[@class="md-text ng-binding" and normalize-space(.)="${option_value}"]
+    Click Element        xpath=//div[@class="md-select-menu-container multiSelectHeader md-active md-clickable"]//md-option[@value="${option_value}" and @role="option"]/div[@class="md-text ng-binding" and normalize-space(.)="${option_value}"]
 
 
 Save Changes
     Wait Until Element Is Visible    xpath=//button[.//span[normalize-space(.)="SAVE"]]    10s
     Click Element                   xpath=//button[.//span[normalize-space(.)="SAVE"]]
-    Sleep    3s
+    Wait Until Element Is Visible    xpath=//button[.//span[normalize-space(.)="OK"]]
+    Click Element    xpath=//button[.//span[normalize-space(.)="OK"]]
+    
+Support PNF/VNF
+    [Arguments]       ${Available}
+    Wait Until Element Is Visible    xpath=//option[normalize-space(.)="${Available}"]
+    Click Element    xpath=//option[normalize-space(.)="${Available}"]
+    Wait Until Element Is Visible  xpath=//input[@id="btnRight"]
+    Click Element    xpath=//input[@id="btnRight"]
+    Sleep    2s
+
+Verify Created Group
+        # 2) Wait for the row to disappear
+    # wait for the AAA row to show up
+    Wait Until Element Is Visible    xpath=//span[normalize-space(.)="${Zone_Management_Node}"]    10s
+    # click the toggle-icon immediately before the AAA button
+    Click Element    xpath=//span[normalize-space(.)="${Zone_Management_Node}"]/parent::button/preceding-sibling::md-icon
+    # wait for one of the child entries (e.g. AMF) to appear
+    Page Should Contain Element    xpath=//p[normalize-space(.)='${Create_cluster_name}']
+
+    Sleep    5s
+
+
+
+
 
 *** Test Cases ***
-Test1 Create Group
+Create Group
     Open Network Inventory
     Expand Network Function
     Add Node
@@ -49,8 +68,13 @@ Test1 Create Group
         Fill Out Form    ${section}    ${label}    ${value}
     END
 
-    FOR    ${section}    ${drp}       ${opt}      IN    @{Zone_Create_Dropdown_FIELD}
-        Dropdown Field    ${section}    ${drp}    ${opt}
+    FOR       ${drp}       ${opt}      IN    @{Zone_Create_Dropdown_FIELD}
+        Dropdown Field      ${drp}    ${opt}
+    END
+
+    FOR    ${Available}       IN    @{Zone_Available}
+        Support PNF/VNF    ${Available}
     END
 
     Save Changes
+#    Verify Created Group

@@ -1,7 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    AutoItLibrary
-Resource    PNF/Variables.robot
+Resource    variables.robot
 
 *** Keywords ***
 Login Once
@@ -21,4 +21,4 @@ Open Network Inventory
 
 Expand Network Function
     Click Element    xpath=//md-list-item[.//p[normalize-space(.)="${Network_Element}"]]//button[contains(@class,"md-secondary")]
-    Wait Until Element Is Visible    xpath=//span[normalize-space(.)="${Zone_Management_Node}"]    10s
+    Wait Until Element Is Visible    xpath=//span[normalize-space(.)="${NTC_Management_Node}"]    10s

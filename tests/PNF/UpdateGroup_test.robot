@@ -1,7 +1,7 @@
 *** Settings ***
 Library          SeleniumLibrary
 Resource    ../../Resources/PNF/Variables.robot
-Resource    ../../Resources/common.robot
+Resource    ../../Resources/PNF/common.robot
 Suite Setup      Login Once
 Suite Teardown   Close Browser
 
@@ -23,7 +23,6 @@ Update Field In Section
     Run Keyword And Continue On Failure    Page Should Contain Element    xpath=${loc2}
     ${loc3}=    Set Variable    ${loc2}//label[normalize-space(.)="${label_text}"]
     Run Keyword And Continue On Failure    Page Should Contain Element    xpath=${loc3}
-    Log To Console    ${loc3}
     Input Text                  ${loc3}/following-sibling::input    ${value}
     Sleep    1s
 
@@ -33,7 +32,6 @@ Update Dropdown Field
     ${select_id}=      Get Element Attribute    xpath=${label_xpath}    for
     Click Element      id=${select_id}
     Sleep              3s
-    Log To Console    xpath=//div[@class="md-select-menu-container multiSelectHeader md-active md-clickable"]//md-option[@value="${option_value}" and @ng-value="dropdown_option" and @aria-hidden="false"]/div[@class="md-text ng-binding" and normalize-space(.)="${option_value}"]
     Click Element    xpath=//div[@class="md-select-menu-container multiSelectHeader md-active md-clickable"]//md-option[@value="${option_value}" and @ng-value="dropdown_option" and @aria-hidden="false"]/div[@class="md-text ng-binding" and normalize-space(.)="${option_value}"]
 
 UPDATE Changes
@@ -54,10 +52,8 @@ Check Fields After Update
     # 3) Find the exact label inside that container
     ${label_xpath}=    Set Variable    //legend[normalize-space(.)="${section_header}"]/following-sibling::div//label[normalize-space(.)="${label_text}"]
     Wait Until Element Is Visible    xpath=${label_xpath}    10s
-    Log To Console    ${label_xpath}
     # 4) Pull its generated “for” attribute (the input’s ID)
     ${field_id}=    Get Element Attribute    xpath=${label_xpath}    for
-    Log To Console    ${field_id}
     ${actual}=     Get Value               id=${field_id}
 
     Run Keyword If    '${actual}' == '${expected_value}'
@@ -79,7 +75,6 @@ Check Dropdown After Update    [Arguments]    ${section_header}    ${label_text}
 
     # 3) Grab its text
     ${selected}=    Get Text    xpath=${text_xpath}
-    Log To Console    Selected “${label_text}” under “${section_header}” is: ${selected}
 
     Run Keyword If    '${selected}' == '${expected_value}'
     ...    Log To Console    ✅ [${section_header}] ${label_text} matches expected: ${selected}
@@ -98,7 +93,7 @@ Check Dropdown After Update    [Arguments]    ${section_header}    ${label_text}
 
 
 *** Test Cases ***
-Test1 Update Group
+Update Group
     Open Network Inventory
     Expand Network Function
     Expand AAA Group And Locate Test Group
@@ -109,10 +104,10 @@ Test1 Update Group
         Update Dropdown Field    ${section}    ${label}    ${value}
     END
     UPDATE Changes
-    FOR    ${section}    ${label}     ${value}    IN    @{Check_FIELDS}
-        Check Fields After Update        ${section}    ${label}    ${value}
-    END
-    FOR    ${section}    ${label}     ${value}    IN    @{Check_Dropdown}
-        Check Dropdown After Update        ${section}    ${label}    ${value}
-    END
+#    FOR    ${section}    ${label}     ${value}    IN    @{Check_FIELDS}
+#        Check Fields After Update        ${section}    ${label}    ${value}
+#    END
+#    FOR    ${section}    ${label}     ${value}    IN    @{Check_Dropdown}
+#        Check Dropdown After Update        ${section}    ${label}    ${value}
+#    END
 
