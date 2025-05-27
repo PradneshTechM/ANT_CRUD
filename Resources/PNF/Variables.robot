@@ -1,11 +1,13 @@
 *** Variables ***
-##############################******COMMON******######################################################
 
+
+##############################******COMMON******######################################################
 ${Network_Element}    PNF/VNF Management
 ${DRIVER_PATH}    C:\\Python39\\driver\\chromedriver-win64\\chromedriver.exe
 ${URL}            https://ant228.dev.att.com:8443
 ${PRIORITY_TEXT}  Priority-Queue-Testing
 ##############################******COMMON******######################################################
+
 
 ##############################******CREATE******######################################################
 
@@ -37,6 +39,7 @@ ${Update_cluster_name}    test33    #if you don't want to change the cluster nam
 ...    AAA Details       Deployment Mode         AAA_Active_Standby
 ...    AAA Details 2     Deployment Type         Active
 ##############################******CREATE******######################################################
+
 
 ##############################******UPDATE******######################################################
 @{Update_FIELDS}
