@@ -7,11 +7,8 @@ Suite Teardown   Close Browser
 
 *** Keywords ***
 Expand AAA Group And Locate Test Group
-    # wait for the AAA row to show up
     Wait Until Element Is Visible    xpath=//span[normalize-space(.)="${PNF_Management_Node}"]    10s
-    # click the toggle-icon immediately before the AAA button
     Click Element    xpath=//span[normalize-space(.)="${PNF_Management_Node}"]/parent::button/preceding-sibling::md-icon
-    # wait for one of the child entries (e.g. AMF) to appear
     Click Element    xpath=//p[normalize-space(.)="${Create_cluster_name}"]/following-sibling::md-icon[contains(@class,"editClass")]
     Sleep    5s
 
@@ -43,16 +40,12 @@ UPDATE Changes
 
 Check Fields After Update
     [Arguments]    ${section_header}    ${label_text}    ${expected_value}
-    # 1) Find the header span
     ${header_xpath}=    Set Variable    //span[normalize-space(.)="${section_header}"]
     Wait Until Element Is Visible    xpath=${header_xpath}    10s
-    # 2) Climb up to its legend and down into the section container
     ${container_xpath}=    Set Variable    ${header_xpath}/ancestor::legend/following-sibling::div
     Wait Until Element Is Visible    xpath=${container_xpath}    10s
-    # 3) Find the exact label inside that container
     ${label_xpath}=    Set Variable    //legend[normalize-space(.)="${section_header}"]/following-sibling::div//label[normalize-space(.)="${label_text}"]
     Wait Until Element Is Visible    xpath=${label_xpath}    10s
-    # 4) Pull its generated “for” attribute (the input’s ID)
     ${field_id}=    Get Element Attribute    xpath=${label_xpath}    for
     ${actual}=     Get Value               id=${field_id}
 
@@ -61,19 +54,12 @@ Check Fields After Update
     ...    ELSE
     ...    Log To Console    ❌ [${section_header}] ${label_text} mismatch – expected: ${expected_value}, actual: ${actual}
 
-    # Always assert at the end so the test fails if they differ
     Should Be Equal    ${actual}    ${expected_value}
 
 Check Dropdown After Update    [Arguments]    ${section_header}    ${label_text}    ${expected_value}
-    # your label xpath from before
-     # 1) Find the <label> for your dropdown
     ${label_xpath}=    Set Variable    //legend[normalize-space(.)="${section_header}"]/following-sibling::div//label[normalize-space(.)="${label_text}"]
     Wait Until Element Is Visible    xpath=${label_xpath}    10s
-
-    # 2) From that label descend into the md-select and into the md-text/ng-binding div
     ${text_xpath}=    Set Variable    ${label_xpath}/following-sibling::md-select//div[contains(@class,"md-text") and contains(@class,"ng-binding")]
-
-    # 3) Grab its text
     ${selected}=    Get Text    xpath=${text_xpath}
 
     Run Keyword If    '${selected}' == '${expected_value}'
@@ -81,7 +67,6 @@ Check Dropdown After Update    [Arguments]    ${section_header}    ${label_text}
     ...    ELSE
     ...    Log To Console    ❌ [${section_header}] ${label_text} mismatch – expected: ${expected_value}, actual: ${selected}
 
-    # Always assert at the end so the test fails if they differ
     Should Be Equal    ${selected}    ${expected_value}
 
 

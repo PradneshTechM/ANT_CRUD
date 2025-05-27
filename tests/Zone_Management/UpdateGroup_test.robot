@@ -67,15 +67,9 @@ Check Fields After Update
     Should Be Equal    ${actual}    ${expected_value}
 
 Check Dropdown After Update    [Arguments]       ${label_text}    ${expected_value}
-    # your label xpath from before
-     # 1) Find the <label> for your dropdown
     ${label_xpath}=    Set Variable    //label[normalize-space(.)="${label_text}"]
     Wait Until Element Is Visible    xpath=${label_xpath}    10s
-
-    # 2) From that label descend into the md-select and into the md-text/ng-binding div
     ${text_xpath}=    Set Variable    ${label_xpath}/following-sibling::md-select//div[contains(@class,"md-text") and contains(@class,"ng-binding")]
-
-    # 3) Grab its text
     ${selected}=    Get Text    xpath=${text_xpath}
 
     Run Keyword If    '${selected}' == '${expected_value}'
@@ -83,19 +77,12 @@ Check Dropdown After Update    [Arguments]       ${label_text}    ${expected_val
     ...    ELSE
     ...    Log To Console    ❌  ${label_text} mismatch – expected: ${expected_value}, actual: ${selected}
 
-    # Always assert at the end so the test fails if they differ
     Should Be Equal    ${selected}    ${expected_value}
 
 Check PNF/VNF After Update    [Arguments]       ${label_text}    ${expected_value}
-    # your label xpath from before
-     # 1) Find the <label> for your dropdown
     ${label_xpath}=    Set Variable    //legend[normalize-space(.)="${label_text}"]
     Wait Until Element Is Visible    xpath=${label_xpath}    10s
-
-    # 2) From that label descend into the md-select and into the md-text/ng-binding div
     ${text_xpath}=    Set Variable    ${label_xpath}/following-sibling::md-content//p[contains(@class,'printNodeName')]
-
-    # 3) Grab its text
     ${selected}=    Get Text    xpath=${text_xpath}
 
     Run Keyword If    '${selected}' == '${expected_value}'
@@ -103,7 +90,6 @@ Check PNF/VNF After Update    [Arguments]       ${label_text}    ${expected_valu
     ...    ELSE
     ...    Log To Console    ❌  ${label_text} mismatch – expected: ${expected_value}, actual: ${selected}
 
-    # Always assert at the end so the test fails if they differ
     Should Be Equal    ${selected}    ${expected_value}
 
 

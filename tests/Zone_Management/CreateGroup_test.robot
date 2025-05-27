@@ -44,14 +44,9 @@ Support PNF/VNF
     Sleep    2s
 
 Verify Created Group
-        # 2) Wait for the row to disappear
-    # wait for the AAA row to show up
     Wait Until Element Is Visible    xpath=//span[normalize-space(.)="${Zone_Management_Node}"]    10s
-    # click the toggle-icon immediately before the AAA button
     Click Element    xpath=//span[normalize-space(.)="${Zone_Management_Node}"]/parent::button/preceding-sibling::md-icon
-    # wait for one of the child entries (e.g. AMF) to appear
     Page Should Contain Element    xpath=//p[normalize-space(.)='${Create_cluster_name}']
-
     Sleep    5s
 
 
