@@ -1,8 +1,13 @@
 *** Variables ***
+##############################******COMMON******######################################################
+
 ${Create_cluster_name}    test32
 ${Update_cluster_name}    test32    #if you don't want to change the cluster name set its value to the same as create_cluster_name
 ${Zone_Management_Node}    5EC
 ${Network_Element}    Zone Management
+##############################******COMMON******######################################################
+
+
 ##############################******CREATE******######################################################
 @{Zone_ENTRY_FILL_FIELDS}
 ...    Zone Details    Name                   ${Create_cluster_name}
