@@ -1,6 +1,5 @@
 *** Settings ***
 Library    SeleniumLibrary
-Library    AutoItLibrary
 Resource    Variables.robot
 
 

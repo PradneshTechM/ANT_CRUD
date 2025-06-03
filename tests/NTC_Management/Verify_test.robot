@@ -21,7 +21,7 @@ Verify Cluster
     Run Keyword If    ${found}
     ...    Log To Console    ✅ Cluster “${Test}” found under “${node}”
     ...    ELSE
-    ...    Fail    ❌ Cluster “${Test}” **NOT** found under “${node}”
+    ...    Fail        ❌ Cluster “${Test}” **NOT** found under “${node}”
 
 
 *** Test Cases ***
