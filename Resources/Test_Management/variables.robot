@@ -41,8 +41,8 @@ ${PRIORITY_TEXT}  Priority-Queue-Testing
 
 @{PNF_VNF Text Input}
 ...    testCaseNameInputContainer    test32             None
-...    hpqcTestPlanIDForm            HPQC-12345         None
-...    sendEmailForm                 pk0952@att.com     testCaseInfoLegend
+...    hpqcTestPlanIDChipsContainer            HPQC-12345         None
+...    sendEmailToOthersChipsContainer                 pk0952@att.com     testCaseInfoLegend
 
 @{PNF_VNF predefined list}
 ...     API CallBased
@@ -83,8 +83,8 @@ ${PRIORITY_TEXT}  Priority-Queue-Testing
 
 @{Zone Text Input}
 ...    testCaseNameInputContainer    test32             None
-...    hpqcTestPlanIDForm            HPQC-12345         None
-...    sendEmailForm                 pk0952@att.com     testCaseInfoLegend
+...    hpqcTestPlanIDChipsContainer            HPQC-12345         None
+...    sendEmailToOthersChipsContainer                 pk0952@att.com     testCaseInfoLegend
 
 
 @{Zone test_access_control_id}
