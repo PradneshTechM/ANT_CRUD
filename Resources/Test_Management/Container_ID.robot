@@ -7,6 +7,7 @@ ${Zone script_type_id}                     scriptInputContainerSave
 ${Scenario Dropdown}                       dropInputContainer_test_type
 ${inputDutType}                            inputDutType
 
+${inputPnfVnf}                             inputPnfVnf
 ${inputZoneType}                           inputZoneType
 ${selectZone}                              selectZone
 ${inputSpgwNetwork}                        inputSpgwNetwork
