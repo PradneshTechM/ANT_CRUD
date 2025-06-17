@@ -7,6 +7,11 @@ ${Zone script_type_id}                     scriptInputContainerSave
 ${Scenario Dropdown}                       dropInputContainer_test_type
 ${inputDutType}                            inputDutType
 
+${inputZoneType}                           inputZoneType
+${selectZone}                              selectZone
+${inputSpgwNetwork}                        inputSpgwNetwork
+${inputTrafficTool}                        inputTrafficTool
+
 ${dropInputContainer_jumper}              dropInputContainer_jumper
 ${dropInputContainer_ConnectingServer}    dropInputContainer_ConnectingServer
 ${dropInputContainer_gatewayIp}           dropInputContainer_gatewayIp
